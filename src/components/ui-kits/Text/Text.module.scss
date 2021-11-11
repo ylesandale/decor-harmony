@@ -1,0 +1,87 @@
+.h1,
+.h2,
+.h3,
+.subtitle1,
+.subtitle2,
+.body-text1,
+.body-text2,
+.body-text3,
+.button-text1,
+.button-text2,
+.button-text3 {
+  margin: 0;
+  color: var(--black);
+}
+
+.h1,
+.h2,
+.h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+.subtitle1,
+.subtitle2 .body-text1,
+.body-text2,
+.body-text3,
+.button-text1,
+.button-text2,
+.button-text3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.h1,
+.h2,
+.h3,
+.button-text1,
+.button-text2,
+.button-text3 {
+  font-weight: 700;
+}
+
+.subtitle1,
+.subtitle2,
+.body-text1,
+.body-text2,
+.body-text3 {
+  font-weight: 400;
+}
+
+.h1 {
+  font-size: 56px;
+  line-height: 60px;
+}
+
+.h2 {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.h3 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.subtitle1 {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.subtitle2 {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.body-text1 {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.body-text2 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.body-text3 {
+  font-size: 12px;
+  line-height: 14px;
+}

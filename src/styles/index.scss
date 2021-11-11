@@ -1,0 +1,33 @@
+@import '~normalize.css';
+@import './fonts.scss';
+@import './variables.css';
+@import './_variables.scss';
+
+body {
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: $xlContent;
+  padding: 0 32px;
+  margin: 0 auto;
+
+  @media (max-width: $xlBreakpoint) {
+    max-width: $mdContent;
+    padding: 0 16px;
+  }
+
+  @media (max-width: $mdBreakpoint) {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}

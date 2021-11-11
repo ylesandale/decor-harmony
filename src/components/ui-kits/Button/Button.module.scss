@@ -1,0 +1,30 @@
+.button {
+  font-weight: 700;
+  color: var(--white);
+  padding: 12px 24px;
+  border-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border-radius: 6px;
+  transition: background 0.2 ease-in-out, color 0.2 ease-in-out;
+}
+
+.primary {
+  color: var(--white);
+  background-color: var(--blue);
+
+  &:hover {
+    background-color: darken(#4e6af0, 15%);
+  }
+}
+
+.secondary {
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--black);
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--black);
+  }
+}
