@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from 'components/common/Header/Header';
 import HeadBlock from './HeadBlock/HeadBlock';
+import CatalogBlock from './CatalogBlock/CatalogBlock';
+import Layout from 'components/common/Layout/Layout';
 
 const Main = () => {
   return (
@@ -9,10 +10,12 @@ const Main = () => {
       <Head>
         <title>decor harmony</title>
       </Head>
-      <div className="container">
-        <Header />
-        <HeadBlock />
-      </div>
+      <>
+        <Layout>
+          <HeadBlock />
+          <CatalogBlock />
+        </Layout>
+      </>
     </>
   );
 };

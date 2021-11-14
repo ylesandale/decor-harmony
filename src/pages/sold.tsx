@@ -1,7 +1,3 @@
-import React from 'react';
+import Sold from 'components/Sold/Sold';
 
-const sold = () => {
-  return <div>sold</div>;
-};
-
-export default sold;
+export default Sold;

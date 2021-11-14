@@ -1,7 +1,3 @@
-import React from 'react';
+import Cart from 'components/Cart/Cart';
 
-const cart = () => {
-  return <div>cart</div>;
-};
-
-export default cart;
+export default Cart;

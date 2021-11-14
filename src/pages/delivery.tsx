@@ -1,7 +1,3 @@
-import React from 'react';
+import Delivery from 'components/Delivery/Delivery';
 
-const delivery = () => {
-  return <div>delivery</div>;
-};
-
-export default delivery;
+export default Delivery;

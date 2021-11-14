@@ -1,0 +1,31 @@
+.outerContainer {
+  width: 50%;
+}
+
+.innerContainer {
+  position: relative;
+  min-height: 700px;
+}
+
+.blue {
+  background-color: #b6edff;
+}
+
+.orange {
+  background-color: #fc6e47;
+}
+
+.yellow {
+  background-color: #f1ff9a;
+}
+
+.image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    max-width: 500px;
+  }
+}
