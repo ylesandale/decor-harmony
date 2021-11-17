@@ -5,7 +5,11 @@ import Picture from 'components/ui-kits/Picture/Picture';
 import Text from 'components/ui-kits/Text/Text';
 import styles from './HeadBlock.module.scss';
 
-const HeadBlock = () => {
+interface IHeadBlockProps {
+  onButtonClick: () => void;
+}
+
+const HeadBlock = ({ onButtonClick }: IHeadBlockProps) => {
   return (
     <div className={cn('container', styles.outerContainer)}>
       <Text variant="h1" className={styles.title}>
@@ -14,7 +18,7 @@ const HeadBlock = () => {
       <Text variant="subtitle1" className={styles.subtitle}>
         Создаём уют для вас.
       </Text>
-      <Button onClick={() => console.log(1)}>Каталог</Button>
+      <Button onClick={onButtonClick}>Каталог</Button>
       <Picture
         defaultSrc="/images/Main/Head.png"
         alt="Девушка с телефоном"

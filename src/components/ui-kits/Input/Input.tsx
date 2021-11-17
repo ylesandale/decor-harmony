@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './Input.module.scss';
 
-interface IInputProps {
+export interface IInputProps {
   placeholder: string;
   id: string;
   label?: string;

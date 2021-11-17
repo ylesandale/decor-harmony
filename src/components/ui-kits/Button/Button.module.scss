@@ -11,29 +11,29 @@
 
 .primary {
   color: var(--white);
-}
 
-.blue {
-  background-color: var(--blue);
+  &.blue {
+    background-color: var(--blue);
 
-  &:hover {
-    background-color: darken(#4e6af0, 15%);
+    &:hover {
+      background-color: darken(#4e6af0, 15%);
+    }
   }
-}
 
-.red {
-  background-color: var(--red);
+  &.red {
+    background-color: var(--red);
 
-  &:hover {
-    background-color: darken(#ff5a5a, 15%);
+    &:hover {
+      background-color: darken(#ff5a5a, 15%);
+    }
   }
-}
 
-.green {
-  background-color: var(--green);
+  &.green {
+    background-color: var(--green);
 
-  &:hover {
-    background-color: darken(#23e9b4, 15%);
+    &:hover {
+      background-color: darken(#23e9b4, 15%);
+    }
   }
 }
 
@@ -45,5 +45,25 @@
   &:hover {
     color: var(--white);
     background-color: var(--black);
+  }
+}
+
+.text {
+  padding: 0;
+  color: var(--black);
+  background: none;
+  display: flex;
+  align-items: center;
+
+  &.blue {
+    color: var(--blue);
+  }
+
+  &.black {
+    color: var(--black);
+  }
+
+  &.red {
+    color: var(--red);
   }
 }

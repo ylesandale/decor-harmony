@@ -7,15 +7,19 @@ interface ILayoutColoredProps {
   children: React.ReactNode;
   color: string;
   imgSrc: string;
+  isCardHidden?: boolean;
 }
 
-const LayoutColored = ({ children, imgSrc, color }: ILayoutColoredProps) => {
+const LayoutColored = ({
+  children,
+  imgSrc,
+  color,
+  isCardHidden,
+}: ILayoutColoredProps) => {
   return (
-    <Layout>
-      <div className={styles.container}>
-        {children}
-        <ColoredCard imgSrc={imgSrc} color={color} />
-      </div>
+    <Layout className={styles.container}>
+      {children}
+      {!isCardHidden && <ColoredCard imgSrc={imgSrc} color={color} />}
     </Layout>
   );
 };

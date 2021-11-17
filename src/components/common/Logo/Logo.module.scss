@@ -1,6 +1,9 @@
 .logo {
   display: flex;
   align-items: center;
+  img {
+    max-width: 56px;
+  }
 }
 
 .logoText {

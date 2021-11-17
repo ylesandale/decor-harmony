@@ -1,0 +1,15 @@
+.splide__arrow--prev {
+  left: 0;
+}
+
+.splide__arrow--next {
+  right: 0rem;
+}
+
+.splide__pagination {
+  top: -145px;
+}
+
+.splide__pagination__page.is-active {
+  background-color: var(--black);
+}

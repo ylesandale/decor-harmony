@@ -6,7 +6,7 @@ const MainBlock = () => {
   return (
     <div className={styles.container}>
       <Text variant="h2" className={styles.title}>
-        Условия доставки
+        Варианты и сроки доставки
       </Text>
       <div className={styles.list}>
         <Text variant="subtitle1" className={styles.listItem}>

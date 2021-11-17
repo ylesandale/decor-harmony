@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Field } from 'react-final-form';
-import { Formik } from 'formik';
 import Input from 'components/ui-kits/Input/Input';
 import Button from 'components/ui-kits/Button/Button';
 import Text from 'components/ui-kits/Text/Text';
@@ -10,7 +9,6 @@ import styles from './FeedbackForm.module.scss';
 const FeedbackForm = () => {
   const [termsError, setTermsError] = useState(false);
   const [terms, setTerms] = useState<boolean | undefined>(undefined);
-  const [state, setState] = useState(false);
 
   const handleTermsChange = () => {
     setTermsError(false);
@@ -40,19 +38,13 @@ const FeedbackForm = () => {
     console.log(values);
 
     setTermsError(false);
-    setState(true);
   };
-  console.log(state);
 
   useEffect(() => {
     if (typeof terms !== 'undefined') {
       setTermsError(!terms);
     }
   }, [terms]);
-
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
 
   return (
     <div className={styles.outerContainer}>

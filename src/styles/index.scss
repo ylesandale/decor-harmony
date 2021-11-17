@@ -1,7 +1,9 @@
+@import '@splidejs/splide/dist/css/splide.min.css';
 @import '~normalize.css';
 @import './fonts.scss';
 @import './variables.css';
 @import './_variables.scss';
+@import './slider.scss';
 
 body {
   font-size: 14px;

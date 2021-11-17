@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.image {
+  img {
+    max-width: 290px;
+  }
+}
+
+.description {
+  margin-left: 15px;
+  width: 33%;
+}
+
+.rightBlock {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.buttons {
+  display: flex;
+}
+
+.button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.buttonIcon {
+  margin-right: 5px;
+}

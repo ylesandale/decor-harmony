@@ -6,7 +6,7 @@ import styles from './Nav.module.scss';
 const Nav = () => {
   return (
     <nav className={styles.nav}>
-      <Link href="/">
+      <Link href="/catalog">
         <a>
           <Text variant="body-text1" className={styles.navItem}>
             Каталог

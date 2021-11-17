@@ -5,11 +5,9 @@ import styles from './Button.module.scss';
 interface IButtonProps {
   children: React.ReactNode;
   className?: string;
-  onClick: (
-    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
-  ) => void;
-  variant?: 'primary' | 'secondary';
-  color?: 'blue' | 'red' | 'green';
+  onClick: any;
+  variant?: 'primary' | 'secondary' | 'text';
+  color?: 'blue' | 'red' | 'green' | 'black';
 }
 
 const Button = ({
@@ -25,7 +23,8 @@ const Button = ({
       className={cn(
         styles.button,
         styles[variant],
-        variant === 'primary' && styles[color],
+        (variant === 'primary' && styles[color]) ||
+          (variant === 'text' && styles[color]),
         className
       )}
       onClick={onClick}

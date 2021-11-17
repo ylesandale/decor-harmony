@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
-import styles from './Checkbox.module.scss';
 import CheckboxIcon from '../../../assets/icons/Checkbox2.svg';
+import styles from './Checkbox.module.scss';
 
 interface ICheckboxProps {
   id: string;
