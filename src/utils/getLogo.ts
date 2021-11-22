@@ -1,6 +1,5 @@
 export const getLogo = () => {
   const randomNumber = Math.random();
-  console.log(randomNumber);
 
   if (randomNumber > 0.2 && randomNumber < 0.4) {
     return '/images/HeaderLogo2.png';

@@ -1,15 +1,7 @@
 import { makeAutoObservable } from 'mobx';
-import { toJS } from 'mobx';
+import { IProduct } from './cartStore';
 
-export interface IProduct {
-  title: string;
-  subtitle: string;
-  price: string;
-  img: string;
-  id: number;
-}
-
-class cart {
+class favorites {
   items: IProduct[] = [];
 
   constructor() {
@@ -20,13 +12,13 @@ class cart {
     this.items = items;
   }
 
-  addItemToCart(item: IProduct) {
+  addItemToFavorites(item: IProduct) {
     this.items.push(item);
   }
 
-  removeItemFromCart(id: number) {
+  removeItemFromFavorites(id: number) {
     this.items = this.items.filter((item) => item.id !== id);
   }
 }
 
-export default new cart();
+export default new favorites();

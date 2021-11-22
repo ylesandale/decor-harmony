@@ -15,7 +15,7 @@
   &.blue {
     background-color: var(--blue);
 
-    &:hover {
+    &:not(.disabled):hover {
       background-color: darken(#4e6af0, 15%);
     }
   }
@@ -23,7 +23,7 @@
   &.red {
     background-color: var(--red);
 
-    &:hover {
+    &:not(.disabled):hover {
       background-color: darken(#ff5a5a, 15%);
     }
   }
@@ -31,7 +31,7 @@
   &.green {
     background-color: var(--green);
 
-    &:hover {
+    &:not(.disabled):hover {
       background-color: darken(#23e9b4, 15%);
     }
   }
@@ -42,7 +42,8 @@
   background-color: var(--white);
   border: 1px solid var(--black);
 
-  &:hover {
+  &:not(.disabled):hover,
+  &.disabled {
     color: var(--white);
     background-color: var(--black);
   }
@@ -66,4 +67,9 @@
   &.red {
     color: var(--red);
   }
+}
+
+.disabled {
+  opacity: 0.7;
+  cursor: default;
 }

@@ -1,26 +1,33 @@
 import React from 'react';
+import { observer } from 'mobx-react-lite';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import cart, { IProduct } from 'store/cartStore';
+import favorites from 'store/favoritesStore';
 import Card from 'components/ui-kits/Card/Card';
 import Picture from 'components/ui-kits/Picture/Picture';
 import Text from 'components/ui-kits/Text/Text';
 import Button from 'components/ui-kits/Button/Button';
 import styles from './ProductCard.module.scss';
 
-interface IProductCardProps {
-  title: string;
-  subtitle: string;
-  img: string;
+interface IProductCardProps extends IProduct {
   isButtonsHidden?: boolean;
-  onClick?: () => void;
+  onAddItemToCart?: () => void;
+  onAddItemToFavorites?: () => void;
 }
 
 const ProductCard = ({
   title,
   subtitle,
   img,
+  price,
   isButtonsHidden,
-  onClick,
+  id,
+  onAddItemToCart,
+  onAddItemToFavorites,
 }: IProductCardProps) => {
+  const isItemInCart = cart.items.filter((item) => item.id === id).length > 0;
+  const isItemInFavorites =
+    favorites.items.filter((item) => item.id === id).length > 0;
   return (
     <Card className={styles.container}>
       <Splide options={{ rewind: true }}>
@@ -55,18 +62,23 @@ const ProductCard = ({
       <Text variant="body-text1" className={styles.subtitle}>
         {subtitle}
       </Text>
-      <Text variant="button-text1">1000 ₽</Text>
+      <Text variant="button-text1">{price} ₽</Text>
       {!isButtonsHidden && (
         <>
           <Button
             color="red"
-            onClick={() => console.log(1)}
+            onClick={onAddItemToFavorites}
             className={styles.button}
+            disabled={isItemInFavorites}
           >
-            В избранное
+            {isItemInFavorites ? 'В избранном' : 'В избранное'}
           </Button>
-          <Button variant="secondary" onClick={onClick}>
-            В корзину
+          <Button
+            variant="secondary"
+            onClick={onAddItemToCart}
+            disabled={isItemInCart}
+          >
+            {isItemInCart ? 'В корзине' : 'В корзину'}
           </Button>
         </>
       )}
@@ -74,4 +86,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export default observer(ProductCard);

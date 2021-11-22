@@ -5,7 +5,13 @@
 
 .image {
   img {
+    cursor: pointer;
+    transition: transform 0.2s;
     max-width: 290px;
+
+    &:hover {
+      transform: scale(1.5);
+    }
   }
 }
 

@@ -8,6 +8,7 @@ interface IButtonProps {
   onClick: any;
   variant?: 'primary' | 'secondary' | 'text';
   color?: 'blue' | 'red' | 'green' | 'black';
+  disabled?: boolean;
 }
 
 const Button = ({
@@ -16,6 +17,7 @@ const Button = ({
   className,
   onClick,
   color = 'blue',
+  disabled,
 }: IButtonProps) => {
   return (
     <button
@@ -25,9 +27,13 @@ const Button = ({
         styles[variant],
         (variant === 'primary' && styles[color]) ||
           (variant === 'text' && styles[color]),
-        className
+        className,
+        {
+          [styles.disabled]: disabled,
+        }
       )}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

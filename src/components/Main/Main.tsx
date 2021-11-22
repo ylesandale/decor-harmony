@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <>
       <Head>
-        <title>decor harmony</title>
+        <title>decor harmony | Главная</title>
       </Head>
       <>
         <Layout>

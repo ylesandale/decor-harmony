@@ -1,26 +1,31 @@
 import React, { forwardRef } from 'react';
+import Cookies from 'js-cookie';
 import cn from 'classnames';
-import cart from 'store/cartStore';
+import cart, { IProduct } from 'store/cartStore';
+import favorites from 'store/favoritesStore';
 import ProductCard from 'components/common/ProductCard/ProductCard';
 import Text from 'components/ui-kits/Text/Text';
+import { items } from './data';
+import { onAddItemToFavorites, onAddItemToCart } from 'utils/storeFuncs';
 import styles from './CatalogBlock.module.scss';
 
 const CatalogBlock = (_: any, ref: React.Ref<HTMLDivElement>) => {
-  const items = [1, 2, 3, 4, 5, 6];
-
   return (
-    <div className={cn('container', styles.outerContainer)}>
+    <div ref={ref} className={cn('container', styles.outerContainer)}>
       <Text variant="h2" className={styles.title}>
         Каталог товаров
       </Text>
-      <div ref={ref} className={styles.catalog}>
-        {items.map((item) => (
+      <div className={styles.catalog}>
+        {items.map((item, key) => (
           <ProductCard
-            key={item}
-            title="1"
-            subtitle="2"
-            img="/images/Main/Head.png"
-            onClick={() => cart.addItemToCart(item)}
+            key={key}
+            title={item.title}
+            subtitle={item.subtitle}
+            img={item.img}
+            price={item.price}
+            id={item.id}
+            onAddItemToCart={() => onAddItemToCart(item)}
+            onAddItemToFavorites={() => onAddItemToFavorites(item)}
           />
         ))}
       </div>
