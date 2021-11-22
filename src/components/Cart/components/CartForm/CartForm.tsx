@@ -25,9 +25,10 @@ const CartForm = () => {
 
     if (!values.mobile) {
       errors.mobile = 'Обязательное поле';
-    } else if (!values.mobile.length < 15) {
-      errors.mobile = 'Неверный формат номера телефона';
     }
+    // } else if (!values.mobile.length < 15) {
+    //   errors.mobile = 'Неверный формат номера телефона';
+    // }
 
     return errors;
   };
