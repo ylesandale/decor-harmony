@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from 'components/common/Layout/Layout';
-import Text from 'components/ui-kits/Text/Text';
+import Text from 'components/ui-kit/Text/Text';
 import CatalogBlock from './components/CatalogBlock.tsx/CatalogBlock';
 import styles from './Sold.module.scss';
 

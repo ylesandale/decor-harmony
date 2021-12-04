@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import Picture from 'components/ui-kits/Picture/Picture';
+import Picture from 'components/ui-kit/Picture/Picture';
 import styles from './ColoredCard.module.scss';
 
 interface IColoredCardProps {

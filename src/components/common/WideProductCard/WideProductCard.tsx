@@ -6,10 +6,10 @@ import favorites from 'store/favoritesStore';
 import FavoriteIcon from '../../../assets/icons/favorites-red.svg';
 import TrashIcon from '../../../assets/icons/trash.svg';
 import CartIcon from '../../../assets/icons/favorites-cart.svg';
-import Text from 'components/ui-kits/Text/Text';
-import Picture from 'components/ui-kits/Picture/Picture';
-import Button from 'components/ui-kits/Button/Button';
-import Card from 'components/ui-kits/Card/Card';
+import Text from 'components/ui-kit/Text/Text';
+import Picture from 'components/ui-kit/Picture/Picture';
+import Button from 'components/ui-kit/Button/Button';
+import Card from 'components/ui-kit/Card/Card';
 import styles from './WideProductCard.module.scss';
 
 interface IWideProductCardProps extends IProduct {

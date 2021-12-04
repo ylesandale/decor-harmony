@@ -4,7 +4,7 @@ import { toJS } from 'mobx';
 export interface IProduct {
   title: string;
   subtitle: string;
-  price: string;
+  price: number;
   img: string;
   id: number;
 }
@@ -26,6 +26,10 @@ class cart {
 
   removeItemFromCart(id: number) {
     this.items = this.items.filter((item) => item.id !== id);
+  }
+
+  clearCart() {
+    this.items = [];
   }
 }
 

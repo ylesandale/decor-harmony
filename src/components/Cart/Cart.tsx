@@ -9,9 +9,13 @@ import Layout from 'components/common/Layout/Layout';
 import ColoredCard from 'components/common/ColoredCard/ColoredCard';
 import CartForm from './components/CartForm/CartForm';
 import styles from './Cart.module.scss';
+import { items } from 'components/Main/CatalogBlock/data';
 
 const Cart = () => {
   const isEmpty = cart.items.length === 0;
+  const orderPrice = cart.items.reduce(function (accumulator, item) {
+    return accumulator + Number(item.price);
+  }, 0);
 
   return (
     <>
@@ -21,7 +25,7 @@ const Cart = () => {
       <Layout className={isEmpty ? styles.emptyContainer : undefined}>
         {!isEmpty ? (
           <div className="container">
-            <CartForm />
+            <CartForm orderPrice={orderPrice} items={toJS(cart.items)} />
             <ProductsBlock items={toJS(cart.items)} />
           </div>
         ) : (

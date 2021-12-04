@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from 'components/ui-kits/Text/Text';
-import Button from 'components/ui-kits/Button/Button';
+import Text from 'components/ui-kit/Text/Text';
+import Button from 'components/ui-kit/Button/Button';
 import styles from './EmptyBlock.module.scss';
 
 interface IEmptyBlockProps {

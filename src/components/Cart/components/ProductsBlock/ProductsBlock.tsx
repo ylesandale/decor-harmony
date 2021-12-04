@@ -1,7 +1,7 @@
 import React from 'react';
 import Cookies from 'js-cookie';
 import cart from 'store/cartStore';
-import Text from 'components/ui-kits/Text/Text';
+import Text from 'components/ui-kit/Text/Text';
 import styles from './ProductsBlock.module.scss';
 import WideProductCard from 'components/common/WideProductCard/WideProductCard';
 import { onAddItemToFavorites } from 'utils/storeFuncs';

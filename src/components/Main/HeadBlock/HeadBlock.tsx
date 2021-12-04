@@ -1,8 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
-import Button from 'components/ui-kits/Button/Button';
-import Picture from 'components/ui-kits/Picture/Picture';
-import Text from 'components/ui-kits/Text/Text';
+import Button from 'components/ui-kit/Button/Button';
+import Picture from 'components/ui-kit/Picture/Picture';
+import Text from 'components/ui-kit/Text/Text';
 import styles from './HeadBlock.module.scss';
 
 interface IHeadBlockProps {

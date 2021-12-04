@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Text from 'components/ui-kits/Text/Text';
+import Text from 'components/ui-kit/Text/Text';
 import styles from './Logo.module.scss';
 
 interface ILogoProps {

@@ -3,10 +3,10 @@ import { observer } from 'mobx-react-lite';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import cart, { IProduct } from 'store/cartStore';
 import favorites from 'store/favoritesStore';
-import Card from 'components/ui-kits/Card/Card';
-import Picture from 'components/ui-kits/Picture/Picture';
-import Text from 'components/ui-kits/Text/Text';
-import Button from 'components/ui-kits/Button/Button';
+import Card from 'components/ui-kit/Card/Card';
+import Picture from 'components/ui-kit/Picture/Picture';
+import Text from 'components/ui-kit/Text/Text';
+import Button from 'components/ui-kit/Button/Button';
 import styles from './ProductCard.module.scss';
 
 interface IProductCardProps extends IProduct {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from 'components/ui-kits/Text/Text';
+import Text from 'components/ui-kit/Text/Text';
 import styles from './MainBlock.module.scss';
 
 const MainBlock = () => {

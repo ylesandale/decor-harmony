@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 import cn from 'classnames';
 import favorites from 'store/favoritesStore';
 import { IProduct } from 'store/cartStore';
-import Text from 'components/ui-kits/Text/Text';
+import Text from 'components/ui-kit/Text/Text';
 import WideProductCard from 'components/common/WideProductCard/WideProductCard';
 import { onAddItemToCart } from 'utils/storeFuncs';
 import styles from './ProductsBlock.module.scss';

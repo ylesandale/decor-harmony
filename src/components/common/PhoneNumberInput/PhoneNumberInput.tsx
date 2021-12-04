@@ -1,5 +1,5 @@
 import React from 'react';
-import Input, { IInputProps } from 'components/ui-kits/Input/Input';
+import Input, { IInputProps } from 'components/ui-kit/Input/Input';
 
 const MAX_LENGTH = 15;
 

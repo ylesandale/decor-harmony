@@ -28,3 +28,8 @@ export const onAddItemToCart = (item: IProduct) => {
     Cookies.set('cart', [JSON.stringify(item)], { expires: 7 });
   }
 };
+
+export const clearCart = () => {
+  Cookies.remove('cart');
+  cart.clearCart();
+};

@@ -4,7 +4,7 @@ import cn from 'classnames';
 import cart, { IProduct } from 'store/cartStore';
 import favorites from 'store/favoritesStore';
 import ProductCard from 'components/common/ProductCard/ProductCard';
-import Text from 'components/ui-kits/Text/Text';
+import Text from 'components/ui-kit/Text/Text';
 import { items } from './data';
 import { onAddItemToFavorites, onAddItemToCart } from 'utils/storeFuncs';
 import styles from './CatalogBlock.module.scss';
