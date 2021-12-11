@@ -59,15 +59,15 @@ const WideProductCard = ({
       </Splide>
       <div className={styles.description}>
         <Text variant="subtitle2" className={styles.title}>
-          {title.replaceAll('_', ' ')}
+          {title.replace(/_/g, ' ')}
         </Text>
         <Text variant="body-text1" className={styles.subtitle}>
-          {subtitle.replaceAll('_', ' ')}
+          {subtitle.replace(/_/g, ' ')}
         </Text>
         <Text variant="body-text1" className={styles.sizes}>
           <span>Размеры:</span>
           <br />
-          {sizes.replaceAll('_', ' ')}
+          {sizes.replace(/_/g, ' ')}
         </Text>
       </div>
       <div className={styles.rightBlock}>
