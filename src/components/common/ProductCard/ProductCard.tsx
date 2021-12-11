@@ -47,15 +47,15 @@ const ProductCard = ({
           ))}
       </Splide>
       <Text variant="subtitle2" className={styles.title}>
-        {title.replaceAll('_', ' ')}
+        {title && title.replaceAll('_', ' ')}
       </Text>
       <Text variant="body-text1" className={styles.subtitle}>
-        {subtitle.replaceAll('_', ' ')}
+        {subtitle && subtitle.replaceAll('_', ' ')}
       </Text>
       <Text variant="body-text1" className={styles.sizes}>
         <span>Размеры:</span>
         <br />
-        {sizes.replaceAll('_', ' ')}
+        {sizes && sizes.replaceAll('_', ' ')}
       </Text>
       <Text variant="button-text1">{price} ₽</Text>
       {!isButtonsHidden && (
