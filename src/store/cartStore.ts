@@ -6,6 +6,8 @@ export interface IProduct {
   subtitle: string;
   price: number;
   img: string;
+  imgCounter: number;
+  sizes: string;
   id: number;
 }
 

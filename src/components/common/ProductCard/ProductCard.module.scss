@@ -18,11 +18,22 @@
 }
 
 .title {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
 }
 
 .subtitle {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.sizes {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+
+  span {
+    font-weight: 700;
+  }
 }
 
 .button {

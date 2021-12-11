@@ -15,9 +15,26 @@
   }
 }
 
+.title {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+}
+
 .description {
   margin-left: 15px;
   width: 33%;
+}
+
+.sizes {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+
+  span {
+    font-weight: 700;
+  }
 }
 
 .rightBlock {

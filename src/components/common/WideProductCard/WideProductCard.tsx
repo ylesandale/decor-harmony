@@ -22,9 +22,11 @@ const WideProductCard = ({
   title,
   subtitle,
   img,
+  imgCounter,
   price,
   isFavorites,
   id,
+  sizes,
   onRemove,
   onAdd,
 }: IWideProductCardProps) => {
@@ -42,37 +44,30 @@ const WideProductCard = ({
   return (
     <Card className={styles.container}>
       <Splide options={{ width: 290, rewind: true }}>
-        <SplideSlide>
-          <Picture
-            defaultSrc={img}
-            alt="Фото товара"
-            srcSets={{ xl: img }}
-            className={styles.image}
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Picture
-            defaultSrc={img}
-            alt="Фото товара"
-            srcSets={{ xl: img }}
-            className={styles.image}
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Picture
-            defaultSrc={img}
-            alt="Фото товара"
-            srcSets={{ xl: img }}
-            className={styles.image}
-          />
-        </SplideSlide>
+        {Array(imgCounter)
+          .fill(img)
+          .map((item, key) => (
+            <SplideSlide key={key}>
+              <Picture
+                defaultSrc={`/images/products/${item}${key + 1}.jpeg`}
+                alt="Фото товара"
+                srcSets={{ xl: `/images/products/${item}${key + 1}.jpeg` }}
+                className={styles.image}
+              />
+            </SplideSlide>
+          ))}
       </Splide>
       <div className={styles.description}>
         <Text variant="subtitle2" className={styles.title}>
-          {title}
+          {title.replaceAll('_', ' ')}
         </Text>
         <Text variant="body-text1" className={styles.subtitle}>
-          {subtitle}
+          {subtitle.replaceAll('_', ' ')}
+        </Text>
+        <Text variant="body-text1" className={styles.sizes}>
+          <span>Размеры:</span>
+          <br />
+          {sizes.replaceAll('_', ' ')}
         </Text>
       </div>
       <div className={styles.rightBlock}>

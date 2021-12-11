@@ -49,7 +49,9 @@ const ProductsBlock = ({ items }: IProductsBlock) => {
             title={item.title}
             subtitle={item.subtitle}
             img={item.img}
+            imgCounter={item.imgCounter}
             price={item.price}
+            sizes={item.sizes}
             id={item.id}
             onRemove={() => onRemoveItemFromFavorites(item.id)}
             onAdd={() => onAddItemToCart(item)}

@@ -22,7 +22,9 @@ const CatalogBlock = (_: any, ref: React.Ref<HTMLDivElement>) => {
             title={item.title}
             subtitle={item.subtitle}
             img={item.img}
+            imgCounter={item.imgCounter}
             price={item.price}
+            sizes={item.sizes}
             id={item.id}
             onAddItemToCart={() => onAddItemToCart(item)}
             onAddItemToFavorites={() => onAddItemToFavorites(item)}

@@ -19,9 +19,11 @@ const ProductCard = ({
   title,
   subtitle,
   img,
+  imgCounter,
   price,
   isButtonsHidden,
   id,
+  sizes,
   onAddItemToCart,
   onAddItemToFavorites,
 }: IProductCardProps) => {
@@ -31,36 +33,29 @@ const ProductCard = ({
   return (
     <Card className={styles.container}>
       <Splide options={{ rewind: true }}>
-        <SplideSlide>
-          <Picture
-            defaultSrc={img}
-            alt="Фото товара"
-            srcSets={{ xl: img }}
-            className={styles.image}
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Picture
-            defaultSrc={img}
-            alt="Фото товара"
-            srcSets={{ xl: img }}
-            className={styles.image}
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Picture
-            defaultSrc={img}
-            alt="Фото товара"
-            srcSets={{ xl: img }}
-            className={styles.image}
-          />
-        </SplideSlide>
+        {Array(imgCounter)
+          .fill(img)
+          .map((item, key) => (
+            <SplideSlide key={key}>
+              <Picture
+                defaultSrc={`/images/products/${item}${key + 1}.jpeg`}
+                alt="Фото товара"
+                srcSets={{ xl: `/images/products/${item}${key + 1}.jpeg` }}
+                className={styles.image}
+              />
+            </SplideSlide>
+          ))}
       </Splide>
       <Text variant="subtitle2" className={styles.title}>
-        {title}
+        {title.replaceAll('_', ' ')}
       </Text>
       <Text variant="body-text1" className={styles.subtitle}>
-        {subtitle}
+        {subtitle.replaceAll('_', ' ')}
+      </Text>
+      <Text variant="body-text1" className={styles.sizes}>
+        <span>Размеры:</span>
+        <br />
+        {sizes.replaceAll('_', ' ')}
       </Text>
       <Text variant="button-text1">{price} ₽</Text>
       {!isButtonsHidden && (
