@@ -19,7 +19,7 @@ const Sold = () => {
           <Text variant="subtitle1" className={styles.subtitle}>
             Следите за обновлениями!
           </Text>
-          <CatalogBlock />
+          {/* <CatalogBlock /> */}
         </div>
       </Layout>
     </>

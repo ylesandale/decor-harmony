@@ -12,6 +12,8 @@ const CatalogBlock = () => {
           title={item.title}
           subtitle={item.subtitle}
           img={item.img}
+          imgCounter={item.imgCounter}
+          sizes={item.sizes}
           price={item.price}
           id={item.id}
           isButtonsHidden
